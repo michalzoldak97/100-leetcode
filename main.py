@@ -4,10 +4,10 @@ import problem_2
 
 
 def run_2():
-    l1 = [random.randint(1, 9) for _ in range(100)]
-    l2 = [random.randint(1, 9) for _ in range(100)]
-    ll1, ll2 = problem_2.get_int_ll([1,2,3]), problem_2.get_int_ll([0])
-    print(ll1.to_list())
+    l1 = [random.randint(1, 9) for _ in range(3)]
+    l2 = [random.randint(1, 9) for _ in range(3)]
+    ll1, ll2 = problem_2.get_int_ll(l1), problem_2.get_int_ll(l2)
+    print("{}\n{}".format(ll1.to_list(), ll2.to_list()))
     p = problem_2.Problem2("Add Two Numbers", ll1, ll2)
     p.run_solution()
 

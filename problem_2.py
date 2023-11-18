@@ -13,19 +13,23 @@ class LList:
 
     def __len__(self) -> int:
         cnt = 1
-        ll_val = self.start
-        while ll_val.nxt is not None:
+        node = self.start
+        while True:
             cnt += 1
-            ll_val = ll_val.nxt
+            if not node.nxt:
+                break
+            node = node.nxt
 
         return cnt
 
     def to_list(self) -> list:
         res = []
-        ll_val = self.start
-        while ll_val.nxt is not None:
-            res.append(ll_val.val)
-            ll_val = ll_val.nxt
+        node = self.start
+        while True:
+            res.append(node.val)
+            if not node.nxt:
+                break
+            node = node.nxt
 
         return res
 
@@ -33,9 +37,11 @@ class LList:
         val = 0
         m = 1
         node = self.start
-        while node.nxt is not None:
+        while True:
             val += m * node.val
             m *= 10
+            if not node.nxt:
+                break
             node = node.nxt
 
         return val
