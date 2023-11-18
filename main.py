@@ -4,6 +4,15 @@ import string
 import problem_1
 import problem_2
 import problem_3
+import problem_4
+
+
+def run_4():
+    random.seed(367687759840784)
+    arr_m = [random.randint(-999999, 999999) for _ in range(random.randint(10000, 99999))]
+    arr_n = [random.randint(-999999, 999999) for _ in range(random.randint(10000, 99999))]
+    p = problem_4.Problem4("Sorted Median", arr_m, arr_n)
+    p.run_solution(is_alternative=False)
 
 
 def run_3():
@@ -35,7 +44,7 @@ def run_1():
 
 
 def main():
-    run_3()
+    run_4()
 
 
 if __name__ == "__main__":
