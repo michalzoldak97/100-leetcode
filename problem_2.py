@@ -20,11 +20,32 @@ class LList:
 
         return cnt
 
+    def to_list(self) -> list:
+        res = []
+        ll_val = self.start
+        while ll_val.nxt is not None:
+            res.append(ll_val.val)
+            ll_val = ll_val.nxt
+
+        return res
+
+    def sum(self) -> int:
+        val = 0
+        m = 1
+        node = self.start
+        while node.nxt is not None:
+            val += m * node.val
+            m *= 10
+            node = node.nxt
+
+        return val
+
 
 def get_int_ll(nums: list) -> LList:
     tail = LLNode(nums[-1])
     int_ll = LList(tail)
     for n in reversed(nums[:-1]):
+        print("n {}".format(n))
         node = LLNode(n, tail)
         int_ll.start = node
         tail = node
@@ -39,8 +60,7 @@ class Problem2(solution.Solution):
         self.ll2 = ll2
 
     def _solution(self):
-        l_lst = get_int_ll([i for i in range(0, 7)])
-        print(len(l_lst))
+        print("Sum = {}".format(self.ll1.sum() + self.ll2.sum()))
 
     def _alt_solution(self):
         pass

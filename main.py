@@ -4,8 +4,11 @@ import problem_2
 
 
 def run_2():
-    foo, barr = problem_2.LList(None), problem_2.LList(None)
-    p = problem_2.Problem2("Add Two Numbers", foo, barr)
+    l1 = [random.randint(1, 9) for _ in range(100)]
+    l2 = [random.randint(1, 9) for _ in range(100)]
+    ll1, ll2 = problem_2.get_int_ll([1,2,3]), problem_2.get_int_ll([0])
+    print(ll1.to_list())
+    p = problem_2.Problem2("Add Two Numbers", ll1, ll2)
     p.run_solution()
 
 
