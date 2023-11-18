@@ -21,7 +21,7 @@ class Solution(abc.ABC):
         """
 
     def run_solution(self, is_alternative=False):
-        t_start = time.time()
+        t_start = time.clock()
         tracemalloc.start()
 
         if is_alternative:
@@ -30,6 +30,6 @@ class Solution(abc.ABC):
             self._solution()
 
         print("Running {} took: {} and mem allocated was: {}".format(self.s_name,
-                                                                     time.time() - t_start,
+                                                                     time.clock() - t_start,
                                                                      tracemalloc.get_traced_memory()))
         tracemalloc.stop()

@@ -1,6 +1,16 @@
 import random
+import string
+
 import problem_1
 import problem_2
+import problem_3
+
+
+def run_3():
+    random.seed(6567368)
+    phrase = ''.join(random.choices(string.ascii_uppercase + string.digits, k=100000))
+    p = problem_3.Problem3("Longest Substring", phrase)
+    p.run_solution(is_alternative=False)
 
 
 def run_2():
@@ -20,12 +30,12 @@ def run_1():
     lst[5555] = 37
     lst[7777] = 54
 
-    p = problem_1.Problem1("Two Sum", [1,5,3,4,6,9,3,37,7,3,1,-7,0,4,2,54,6,7,7,7,3,1,8,7,5], 91)
+    p = problem_1.Problem1("Two Sum", lst, 91)
     p.run_solution(is_alternative=True)
 
 
 def main():
-    run_2()
+    run_3()
 
 
 if __name__ == "__main__":

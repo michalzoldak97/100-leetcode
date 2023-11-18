@@ -51,7 +51,6 @@ def get_int_ll(nums: list) -> LList:
     tail = LLNode(nums[-1])
     int_ll = LList(tail)
     for n in reversed(nums[:-1]):
-        print("n {}".format(n))
         node = LLNode(n, tail)
         int_ll.start = node
         tail = node
