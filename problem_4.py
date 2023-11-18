@@ -9,7 +9,7 @@ class Problem4(solution.Solution):
         self.arr_n = arr_n
 
     def _solution(self):
-        mn_len = len(self.arr_m) + len(self.arr_n)
+        mn_len = (len(self.arr_m) + len(self.arr_n))
         arr_mn = [0 for _ in range(mn_len)]
 
         arr_lower, arr_higher = [], []
@@ -19,13 +19,14 @@ class Problem4(solution.Solution):
             arr_lower, arr_higher = self.arr_n, self.arr_m
 
         l_idx, h_idx = 0, 0
+        l_low, l_high = len(arr_lower), len(arr_higher)
         for i, _ in enumerate(arr_mn):
-            if l_idx == len(arr_lower):
+            if l_idx == l_low:
                 arr_mn[i] = arr_higher[h_idx]
                 h_idx += 1
                 continue
 
-            if h_idx == len(arr_higher):
+            if h_idx == l_high:
                 arr_mn[i] = arr_lower[h_idx]
                 l_idx += 1
                 continue
