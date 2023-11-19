@@ -1,8 +1,8 @@
-import solution
+from .slnbase import Solution
 import math
 
 
-class Problem4(solution.Solution):
+class Problem4(Solution):
     def __init__(self, s_name: str, arr_m: list, arr_n: list):
         super().__init__(s_name)
         self.arr_m = arr_m

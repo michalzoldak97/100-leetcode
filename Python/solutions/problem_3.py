@@ -1,7 +1,7 @@
-import solution
+from .slnbase import Solution
 
 
-class Problem3(solution.Solution):
+class Problem3(Solution):
     def __init__(self, s_name: str, s_in: str):
         super().__init__(s_name)
         self.s_in = s_in

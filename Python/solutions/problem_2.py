@@ -1,4 +1,4 @@
-import solution
+from .slnbase import Solution
 
 
 class LLNode:
@@ -58,7 +58,7 @@ def get_int_ll(nums: list) -> LList:
     return int_ll
 
 
-class Problem2(solution.Solution):
+class Problem2(Solution):
     def __init__(self, s_name: str, ll1: LList, ll2: LList):
         super().__init__(s_name)
         self.ll1 = ll1
