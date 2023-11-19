@@ -7,7 +7,7 @@ class Problem1(Solution):
         self.list_in = list_in
         self.target = target
 
-    def _solution(self) -> tuple:
+    def _solution(self) -> (int, int):
         t = self.target
         lst = self.list_in
 
@@ -22,7 +22,7 @@ class Problem1(Solution):
                 if (el + lst[j]) == t:
                     return i, j
 
-    def _alt_solution(self):
+    def _alt_solution(self) -> (int, int):
         nums = {}
         for i, num in enumerate(self.list_in):
             nums[self.target - num] = i

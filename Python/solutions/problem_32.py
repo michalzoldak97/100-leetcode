@@ -6,7 +6,7 @@ class Problem32(Solution):
         super().__init__(s_name)
         self.phr = phr
 
-    def _solution(self):
+    def _solution(self) -> int:
         max_cnt = 0
         cnt = 0
         should_skip = False
@@ -26,7 +26,7 @@ class Problem32(Solution):
 
             cnt = 0
 
-        print(f"Longest valid parenthesis: {max_cnt}")
+        return max_cnt
 
     def _alt_solution(self):
         pass

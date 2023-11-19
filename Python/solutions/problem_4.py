@@ -8,7 +8,7 @@ class Problem4(Solution):
         self.arr_m = arr_m
         self.arr_n = arr_n
 
-    def _solution(self):
+    def _solution(self) -> float:
         mn_len = (len(self.arr_m) + len(self.arr_n))
         arr_mn = [0 for _ in range(mn_len)]
 
@@ -40,9 +40,9 @@ class Problem4(Solution):
 
         if mn_len % 2 == 0:
             h = int(mn_len / 2)
-            print("median is {}".format((arr_mn[h - 1] + arr_mn[h]) / 2.))
+            return (arr_mn[h - 1] + arr_mn[h]) / 2.
         else:
-            print("median is {}".format(arr_mn[math.floor(mn_len / 2.)]))
+            return arr_mn[math.floor(mn_len / 2.)]
 
     def _find_median(self, nums: list) -> float:
         if len(nums) % 2 == 0:
@@ -67,4 +67,4 @@ class Problem4(Solution):
                 merge.append(self.arr_n[j])
                 j += 1
 
-        print("median is {}".format(self._find_median(merge)))
+        return self._find_median(merge)

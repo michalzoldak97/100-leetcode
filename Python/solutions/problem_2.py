@@ -64,8 +64,8 @@ class Problem2(Solution):
         self.ll1 = ll1
         self.ll2 = ll2
 
-    def _solution(self):
-        print("Sum = {}".format(self.ll1.sum() + self.ll2.sum()))
+    def _solution(self) -> int:
+        return self.ll1.sum() + self.ll2.sum()
 
     def _alt_solution(self):
         pass

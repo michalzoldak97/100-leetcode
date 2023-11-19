@@ -6,7 +6,7 @@ class Problem3(Solution):
         super().__init__(s_name)
         self.s_in = s_in
 
-    def _solution(self):
+    def _solution(self) -> (str, int):
         max_cnt = 1
         max_str = self.s_in[0]
         unique_str = self.s_in[0]
@@ -23,9 +23,9 @@ class Problem3(Solution):
 
             unique_str = c
 
-        print(max_str, len(max_str))
+        return max_str, len(max_str)
 
-    def _alt_solution(self):
+    def _alt_solution(self) -> (str, int):
         s = list(self.s_in)
         start = 0
         length = 0
@@ -43,4 +43,5 @@ class Problem3(Solution):
                 if length > max_length:
                     max_length = length
                     max_str = tmp_str
-        print(max_str, max_length)
+
+        return max_str, max_length
