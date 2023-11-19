@@ -34,18 +34,6 @@ def run_2():
     p.run_solution()
 
 
-def run_1():
-    l_min, l_max = -1199999, 11
-    lst = []
-    for i in range(0, 9999):
-        lst.append(random.randint(l_min, l_max))
-    lst[5555] = 37
-    lst[7777] = 54
-
-    p = sln.Problem1("Two Sum", lst, 91)
-    p.run_solution(is_alternative=True)
-
-
 def main():
     run_32()
 

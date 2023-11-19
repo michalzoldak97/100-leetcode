@@ -7,7 +7,7 @@ class Problem1(Solution):
         self.list_in = list_in
         self.target = target
 
-    def _solution(self):
+    def _solution(self) -> tuple:
         t = self.target
         lst = self.list_in
 
@@ -20,12 +20,7 @@ class Problem1(Solution):
                     continue
 
                 if (el + lst[j]) == t:
-                    print("res is : [{},{}]".format(i, j))
-                    break
-
-            else:
-                continue
-            break
+                    return i, j
 
     def _alt_solution(self):
         nums = {}
@@ -34,5 +29,4 @@ class Problem1(Solution):
 
         for i, num in enumerate(self.list_in):
             if nums.get(num):
-                print("res is : [{},{}]".format(i, nums[num]))
-                break
+                return i, nums[num]
